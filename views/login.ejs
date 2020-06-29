@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="/css/home.css"> -->
+    <link rel="stylesheet" href="/css/home.css">
+    <title>Home</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+    <body>
+    <div id="container">
+                <div id="left" class="display-inline-block center ">
+                    <h1 class="white mt-15">Login</h1>
+                    <p class="smoky">Get access to your <br> account</p>
+                </div>
+               
+                <div id="right">
+                    <form action="/create-session" method="POST">
+                    <div id="email" class="mt-10">
+                    <input type="email" id="email-input" name="email" class="input-style" placeholder="Enter Email" required>
+                    </div>
+                    <div id="password" >
+                        <input type="password" name="password" placeholder="Enter Password" class="input-style" required>
+                    </div>
+                    <div id="login" style="display: inline-block;">
+                        <input type="submit" value="Login" class="login-btn">
+                    </div>
+                    </form>
+                    <div id="login">
+                        <form action="/signUp" method="GET" id="signup" >
+                        <input type="submit" value="SignUp" class="login-btn" >
+                        </form>
+                    </div>
+                    <h1 id="font-or">OR</h1>
+                    <div id="login">
+                        <form action="/users/auth/google" method="GET">
+                        <input type="submit" value="Continue with Google" class="login-btn">
+                        </form>
+                    </div>
+              
+                </div>
+               
+    </div>
+</head>
+<script>
+    <% if(flash.success && flash.success.length > 0){%>
+          new Noty({
+              theme :"relax",
+              text: "<%= flash.success%>",
+              type: "success",
+              layout: "topRight",
+              progressBar : false,
+              timeout: 3000
+          }).show();
+      <% } %>
+      <% if(flash.error && flash.error.length > 0){%>
+          new Noty({
+              theme :"relax",
+              text: "<%= flash.error%>",
+              type: "error",
+              layout: "topRight",
+              progressBar : false,
+              timeout: 3000
+          }).show();
+      <% } %>
+      console.log(" I AM HERE RUNNING SCRIPT");
+  </script>
+
+    
+</body>
+</html>

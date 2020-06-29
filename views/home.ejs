@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/home.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+</head>
+<body>
+   <div class="sign-out"><span class="sign-out-style"> <a href="/signout" >Sign Out</a></span></div>
+   <div id="home"> 
+   <form action="update" method="POST">
+    <div id="email" class="mt-10">
+        <input type="text" id="" name="email"  class="input-style" value="<%=locals.user.email%>" required hidden>
+        </div>
+        <div id="password" >
+        <input type="text"  name="name" class="input-style" value="<%= locals.user.name%>"  required>
+        </div>
+        <div id="password" >
+            <input type="password" name="password" placeholder="Enter Password" class="input-style" required>
+        </div>
+        <div id="login"  class="update" style="display: inline-block;">
+            <input type="submit" value="Update" class="update-btn">
+        </div>
+        </form>
+    </div>
+
+    <script>
+      <% if(flash.success && flash.success.length > 0){%>
+            new Noty({
+                theme :"relax",
+                text: "<%= flash.success%>",
+                type: "success",
+                layout: "topRight",
+                progressBar : false,
+                timeout: 3000
+            }).show();
+        <% } %>
+        <% if(flash.error && flash.error.length > 0){%>
+            new Noty({
+                theme :"relax",
+                text: "<%= flash.error%>",
+                type: "error",
+                layout: "topRight",
+                progressBar : false,
+                timeout: 3000
+            }).show();
+        <% } %>
+        console.log(" I AM HERE RUNNING SCRIPT");
+    </script>
+
+   
+</body>
+</html>

@@ -1,0 +1,127 @@
+body
+{
+    margin:0;
+    background-image: url("https://images.unsplash.com/photo-1488155436641-58ef42fcc44e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+    background-size: cover;
+}
+#container
+{
+    height: 80vh;
+    width: 50vw;
+    margin-left: 25vw;
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: row;
+}
+#left
+{
+    height: inherit;
+    width: 20vw;
+    background-image: url("https://images.unsplash.com/photo-1507646227500-4d389b0012be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+    text-align: center;
+    background-size: cover;
+}
+#right
+{
+    height: inherit;
+    width: 30vw;
+    text-align: center;
+    background-color: white ;
+
+}
+.input-style
+{
+    /* margin-left: 5vw; */
+    height: 5vh;
+    width: 20vw;
+    border: 0;
+    border-bottom: 2px solid #2874F0;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    padding: 2px 12px;
+    outline: none;
+}
+#password
+{
+    margin-top: 2vh;
+}
+#login
+{
+    margin-top: 3vh;
+}
+.login-btn
+{
+   color: white;
+   background-color: #FB641B;
+   border-radius: 8px;
+   width: 18vw; 
+   height: 5vh;
+   border: none;
+   outline: none;
+   cursor: pointer;
+}
+.sign-out
+{
+    float: right;
+    width: 20vw;
+    height: 5vh;
+    margin-top: 2vh;
+    background-color: #FB641B;
+    columns: white;
+    text-align: center;
+}
+.sign-out-style a
+{
+    color: white;
+    text-decoration: none;
+}
+.sign-out
+{
+    padding-top: 2vh;
+}
+.update
+{
+    text-align: center !important;
+}
+.update-btn
+{
+    color: white;
+   background-color: #FB641B;
+   border-radius: 8px;
+   width: 18vw; 
+   height: 5vh;
+   border: none;
+   outline: none;
+   cursor: pointer;
+   font-size: 1rem;
+   
+}
+
+
+/* Utility */
+#font-or
+{
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    color: rgb(163, 171, 173);
+    margin-top: 2vh;
+}
+.mt-10
+{
+    margin-top: 10vh;
+}
+.smoky
+{
+    color: rgba(252, 252, 252, 0.4);
+    font-size: 2rem;
+    font-weight: 500;
+}
+.white
+{
+    color: white;
+}
+.mt-15
+{
+    margin-top: 15vh;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="/css/home.css"> -->
+    <link rel="stylesheet" href="/css/home.css">
+    <title>Home</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+    <body>
+    <div id="container">
+                <div id="left" class="display-inline-block center ">
+                    <h1 class="white mt-15">SignUp</h1>
+                    <p class="smoky">And Get access to your <br> Favoutite <br> Shows </p>
+                </div>
+               
+                <div id="right">
+                    <form action="/user/create" method="POST">
+                    <div id="email" class="mt-10">
+                    <input type="text" id="" name="name"  class="input-style" placeholder="Enter Name" required>
+                    </div>
+                    <div id="password" >
+                        <input type="email" placeholder="Enter Email" name="email" class="input-style" required>
+                    </div>
+                    <div id="password" >
+                        <input type="password" placeholder="Enter Password" name="password" class="input-style" required>
+                    </div>
+                    <div id="password" >
+                        <input type="password" placeholder="Confirm password" name="confirmPassword" class="input-style" required>
+                    </div>
+                    <!-- <div id="login" style="display: inline-block;">
+                        <input type="submit" value="Login" class="login-btn">
+                    </div> -->
+                    
+                    <div id="login">
+                        <input type="submit" value="SignUp" class="login-btn" >
+                        
+                    </div>
+                </form>
+                <form action="/login" method="GET">
+                    <div id="login">
+                        <input type="submit" value="Back to Login" class="login-btn" >
+                        </form>
+                    </div>
+                    <!-- <h1 id="font-or">OR</h1> -->
+                    <!-- <div id="login">
+                        <input type="submit" value="Continue with Google" class="login-btn">
+                    </div> -->
+                   
+                </div>
+               
+    </div>
+</head>
+<script>
+<% if(flash.success && flash.success.length > 0){%>
+    new Noty({
+        theme :"relax",
+        text: "<%= flash.success%>",
+        type: "success",
+        layout: "topRight",
+        progressBar : false,
+        timeout: 3000
+    }).show();
+<% } %>
+<% if(flash.error && flash.error.length > 0){%>
+    new Noty({
+        theme :"relax",
+        text: "<%= flash.error%>",
+        type: "error",
+        layout: "topRight",
+        progressBar : false,
+        timeout: 3000
+    }).show();
+<% } %>
+console.log(" I AM HERE RUNNING SCRIPT");
+</script>
+    
+</body>
+</html>
