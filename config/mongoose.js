@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-mongoose.connect('mongodb+srv://user:krishs64%23@cluster0.bqpwa.mongodb.net/SocialAuth?retryWrites=true&w=majority');
+mongoose.connect('mongodb://warehowz-dev-test-01:Wd6r2CgyZLfhhRY2TuaHUbaxPDJ3axUTYzHce9KL7f4HjAsKqtasBYhQ4ddV6wqw123@localhost:27017/warehowz-dev-test?authSource=warehowz-dev-test');
 
 const db = mongoose.connection;
 
