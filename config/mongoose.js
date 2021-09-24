@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-mongoose.connect('mongodb+srv://user:krishs64#@cluster0.bqpwa.mongodb.net/SocialAuth?retryWrites=true&w=majority');
+mongoose.connect('mongodb+srv://user:krishs64'#'@cluster0.bqpwa.mongodb.net/SocialAuth?retryWrites=true&w=majority');
 
 const db = mongoose.connection;
 
