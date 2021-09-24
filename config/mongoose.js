@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-mongoose.connect('mongodb://127.0.0.1/SocailAuthentication');
+mongoose.connect('mongodb+srv://user:krishs64#@cluster0.bqpwa.mongodb.net/myFirstDatabase?retryWrites=true&w=majority');
 
 const db = mongoose.connection;
 
